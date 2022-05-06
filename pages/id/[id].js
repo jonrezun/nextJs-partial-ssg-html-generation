@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 
   const paths = [];
   json.forEach((el) => {
-    if (el.id < 20) paths.push({ params: { id: el.id + "" } });
+    if (el.id < 6) paths.push({ params: { id: el.id + "" } });
   });
 
   return {
