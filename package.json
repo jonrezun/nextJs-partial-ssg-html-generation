@@ -5,7 +5,9 @@
     "dev": "next dev -p 3008",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "revalidate": "node setupRevalidate.js"
   },
   "dependencies": {
     "fs-extra": "^10.1.0",

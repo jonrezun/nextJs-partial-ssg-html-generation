@@ -1,9 +1,14 @@
 import React from "react";
+import styles from "../../styles/Home.module.css";
+import Link from "next/link";
 
-const Test = ({ data }) => {
+const Test = ({ data, id }) => {
   return (
     <div>
-      <h1>Tttle - {data.title}</h1>
+      <h1 className={styles.title}>Tttle - {data.title}</h1>
+      <Link href={`/id/${+id + 1}`}>
+        <a>Page - {+id + 1}</a>
+      </Link>
     </div>
   );
 };
@@ -38,6 +43,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       data: json,
+      id: params.id,
     },
   };
 }
